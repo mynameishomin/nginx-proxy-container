@@ -1,0 +1,13 @@
+version: "3"
+services:
+    nginx:
+        image: nginx:alpine
+        container_name: <container>
+        environment:
+            - VIRTUAL_HOST=<sub>.<domain>.com
+        networks:
+            - <network>
+
+networks:
+    <network>:
+        external: true
